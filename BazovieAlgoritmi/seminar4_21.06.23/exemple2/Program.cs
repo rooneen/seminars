@@ -2,7 +2,7 @@
 
 // Console.Write("Введите число: ");
 // string number = Console.ReadLine()!;
-// Console.WriteLine($"В числе {number} - {SumNumb(array)} символов");
+// Console.WriteLine($"В числе {number} - {SumNumb(number)} символов");
 
 // int SumNumb(int [] array)
 // {
