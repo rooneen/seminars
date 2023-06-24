@@ -9,9 +9,9 @@ int SumNumb(int array)
 {
     int count = numberString.Length;
 
-    for (int i = 0; i < count; i++)
+    for (int i = 0; i < array; i++)
     {
-        //Console.Write($"{count} ");
+        count += i;
     }
     return count;
 }    
