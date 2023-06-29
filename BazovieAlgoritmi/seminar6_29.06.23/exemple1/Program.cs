@@ -6,6 +6,9 @@ int size = int.Parse(Console.ReadLine()!);
 int[] array = GetArray(size, 10, 99);
 Console.WriteLine($"[{String.Join(", ", array)}]");
 
+int[] rezultArray = ReverseArray2(array);
+Console.WriteLine($"[{String.Join(", ", rezultArray)}]");
+
 ReverseArray1(array);
 Console.WriteLine($"[{String.Join(", ", array)}]");
 
@@ -18,6 +21,17 @@ void ReverseArray1(int[] inArray)
         inArray[i] = inArray[inArray.Length - 1 - i]; // переносим в первый элемент - последний элемент
         inArray[inArray.Length - 1 - i] = temp; // переносим в последний элемент значение первого элемента и временной переменной
     }
+}
+
+// второй вариант разворота массива
+int[] ReverseArray2(int[] inArray)
+{
+    int[] rezult = new int[inArray.Length];
+    for(int i = 0; i < inArray.Length; i++)
+    {
+        rezult[i] = inArray[inArray.Length - i - 1];
+    }
+    return rezult;
 }
 
 int[] GetArray(int size, int minValue, int maxValue){         
