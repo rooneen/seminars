@@ -7,7 +7,7 @@ int rows = int.Parse(Console.ReadLine()!);
 Console.Write("Введите количество столбцов: ");
 int colums = int.Parse(Console.ReadLine()!);
 
-while (rows == colums)
+while (rows == colums || rows == 0 || colums == 0)
 {
     Console.WriteLine("Введите НЕ! одинаковые значения");
     Console.Write("Введите количество строк: ");
@@ -15,7 +15,6 @@ while (rows == colums)
 
     Console.Write("Введите количество столбцов: ");
     colums = int.Parse(Console.ReadLine()!);
-
 }
 
 int[,] array = GetArray(rows, colums, 0, 10);
